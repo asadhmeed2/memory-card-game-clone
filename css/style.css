@@ -1,22 +1,94 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,1fr);
+body{
+    display: flex;
+    justify-content: center;
 }
-.manster-1{
-    background:url(../img/monster-1.jpg)no-repeat center center/cover
+.container {
+  width: 40vw;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1px;
 }
-.manster-2{
-    background:url(../img/monster-2.jpg)no-repeat center center/cover
+.card-down {
+  background: black;
 }
-.manster-3{
-    background:url(../img/monster-3.jpg)no-repeat center center/cover
+.card {
+  border: 1px solid white;
+  cursor: pointer;
+height: 100%;
+ 
 }
-.manster-4{
-    background:url(../img/monster-4.jpg)no-repeat center center/cover
+.card:hover {
+  transform: scale(1.02);
+  opacity: 0.8;
+}
+.monster-1 {
+  background: url(../img/monster-1.jpg) no-repeat center center/cover;
+}
+.monster-2 {
+  background: url(../img/monster-2.jpg) no-repeat center center/cover;
+}
+.monster-3 {
+  background: url(../img/monster-3.jpg) no-repeat center center/cover;
+}
+.monster-4 {
+  background: url(../img/monster-4.jpg) no-repeat center center/cover;
+}
+.monster-5 {
+  background: url(../img/monster-5.jpg) no-repeat center center/cover;
+}
+.monster-6 {
+  background: url(../img/monster-6.jpg) no-repeat center center/cover;
+}
+
+@media (max-width: 1020px) {
+    .container{
+        width: 98vw;
+        height: 95vh;
+    }
+}
+@media (min-width: 1021px )and( max-width : 1500px) {
+    .container{
+        width: 50vw;
+    }
+}
+
+.reloadPage {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    color: #ffff;
+    z-index: -1;
+    background:rgba(255,255,255,0.5);
+    opacity:0;
+}
+.startPage {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    color: black;
+    background:rgba(255,255,255,0.8)
+}
+.btn{
+    padding: 1vmax;
+    border-radius: 15px;
+    background:rgba(206, 143, 143, 0.794)
 }
